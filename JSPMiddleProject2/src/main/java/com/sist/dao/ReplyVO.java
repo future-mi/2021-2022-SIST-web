@@ -1,7 +1,8 @@
 package com.sist.dao;
 import java.util.*;
 public class ReplyVO {
-	// 
+	// 댓글 , 공지사항 → 날짜(시간) → 자바에서 처리가 안된다 
+	// TO_CHAR(regdate,'YYYY-MM-DD HH24:MI:SS') → String
 	private int no,food_no;
 	private String id,name,msg;
 	private Date regdate;
@@ -48,7 +49,5 @@ public class ReplyVO {
 	}
 	public void setDbday(String dbday) {
 		this.dbday = dbday;
-	}
-	
-	
+	}	
 }

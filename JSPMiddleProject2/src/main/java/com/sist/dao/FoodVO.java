@@ -78,5 +78,4 @@ public class FoodVO {
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-	
 }

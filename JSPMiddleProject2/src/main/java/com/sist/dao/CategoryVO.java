@@ -29,6 +29,4 @@ public class CategoryVO {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
-	
-	
 }
