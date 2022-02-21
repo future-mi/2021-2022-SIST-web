@@ -1,0 +1,87 @@
+<!-- 
+     -------- input :입력창
+     <input> : 한줄입력 
+        <input type="설정">
+     [ type의 종류 ]  
+     1) 한줄 문자열 입력 : id,password,댓글 , 리뷰 , 제목..
+                      type="text"
+     2) 비밀번호 : type="password"
+     3) 버튼의 종류 
+        - 버튼
+          type="button" : 일반 버튼 (기능) => 반드시 자바스크립트 이용 
+          type="submit" : 전송버튼 (입력한 모든값을 다른 파일로 전송)
+          type="reset" : 초기화 (입력된 값을 초기화)
+          <button> 
+          <input type="image"> : submit 버튼과 동일한 역할 수행 
+        - 토글버튼 
+          type="radio" : 한개만 선택할 수 있게 만든다 
+          type="checkbox"
+     4) 날짜 : 달력 → HTML5
+              type="date"
+     5) 숫자출력(spinner)
+              type="number"
+     6) 슬라이더
+              type="slider"
+     7) 파일업로드 
+              type="file"
+     8) 화면에 데이터를 감춘다(비밀번호, 아이디)
+              type="hidden"
+        <select> : Combobox 
+                   <select> <option> 데이터 </option>
+        <textarea> : 멀티라인 → rows(height) / cols(width)
+     
+        입력창을 다 모아서 → 전송 준비 → <form> 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <center>
+  <h1>입력과 관련된 태그</h1>
+    <p>
+    이름 : <input type="text" style="width:100px; height:35px">
+    <p>
+    비밀번호 : <input type="password" style="width:100px; height:35px">
+    <p>
+    파일 : <input type="file" size=30>
+  	<p>
+  	생년월일 : <input type="date" size=25>
+  	<p>
+  	나이 : <input type=number size=20 min="20" max="60" step="2">
+  	<p>
+  	가격대 : <input type="range" size=30 min="1" max="100">
+  	<p>
+  	일반버튼 <input type=button value="아이디중복체크">
+  		  <input type=button value="우편번호찾기">
+  	<p>
+  	전송/초기화 <input type=submit value="회원가입">
+  		     <input type=reset value="취소">
+    <p>
+    전송 <button>글쓰기</button>
+    	<!-- <input type="image" scr="m1.jpg"> -->
+    <p>
+    성별 : <input type="radio" name="sex" value="남자" checked>남자
+    	  <input type="radio" name="sex" value="여자">여자
+    <p>
+    취미 : <input type="checkbox" value="게임">게임
+    	  <input type="checkbox" value="독서">독서
+    	  <input type="checkbox" value="음악감상">음악감상
+    	  <input type="checkbox" value="낚시">낚시
+    	  <input type="checkbox" value="등산">등산
+    	  <input type=hidden name="id" value="admin">
+    <p>
+    Search : <select>
+    			<option>제목</option>
+    			<option>내용</option>
+    			<option>이름</option>
+    		 </select>
+    		 <input type="text" size=15>
+    		 <input type="button" value="검색">
+    <p>
+    내용 : <textarea rows="10" cols="50"></textarea>
+  </center>
+</body>
+</html>
