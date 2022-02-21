@@ -161,10 +161,6 @@ public class DataBoardDAO {
 	}
 	// 답변 / 수정 / 삭제
 	public void databoardReply(int pno,DataBoardVO vo) {
-		try {
-			
-		} catch (Exception ex) {
-			ex.printStackTrace();
 			try {
 				// 1. conn의 주소를 얻어온다
 				getConnection();
@@ -172,41 +168,43 @@ public class DataBoardDAO {
 				conn.setAutoCommit(false);
 				// 3. → pno가 가지고 있는 그룹 정보를 읽어 온다(SELECT)
 				String sql="SELECT group_id,group_step,group_tab "
-						  +"FROM databoard "
-						  +"WHERE no=?";
+	    				  +"FROM databoard "
+	    				  +"WHERE no=?";
 				ps=conn.prepareStatement(sql);
-				ps.setInt(1, pno);
-				ResultSet rs=ps.executeQuery();
-				rs.next();
-				int gi=rs.getInt(1);
-				int gs=rs.getInt(2);
-				int gt=rs.getInt(3);
-				rs.close();
+	    		ps.setInt(1, pno);
+	    		ResultSet rs=ps.executeQuery();
+	    		rs.next();
+	    		int gi=rs.getInt(1);
+	    		int gs=rs.getInt(2);
+	    		int gt=rs.getInt(3);
+	    		rs.close();
 				// 4. → group_step을 한개 증가 (UPDATE)
-				sql="UPDATE databoard SET "
-					+"group_step=group_step+1 "
-					+"WHERE group_id=? AND group_step>?";
-				ps=conn.prepareStatement(sql);
-				ps.setInt(1, gi); //---------------------
+	    		sql="UPDATE databoard SET "
+	    	    		   +"group_step=group_step+1 "
+	    	    		   +"WHERE group_id=? AND group_step>?";
+	    	    ps=conn.prepareStatement(sql);
+	    	    ps.setInt(1, gi);
+	    	    ps.setInt(2, gs);
+	    	    ps.executeUpdate();
 				// 5. → insert (INSERT)
-				sql="INSERT INTO databoard VALUES(db_no_seq.nextval, "
-					+"?,?,?,?,SYSDATE,0,'',0,?,?,?,?,?)";
-				ps=conn.prepareStatement(sql);
-				ps.setString(1, vo.getName());
-				ps.setString(2, vo.getSubject());
-				ps.setString(3, vo.getContent());
-				ps.setString(4, vo.getPwd());
-				ps.setInt(5, gi);
-				ps.setInt(6, gs+1);
-				ps.setInt(7, gt+1);
-				ps.setInt(8, pno);
-				ps.setInt(9, 0);
+	    	    sql="INSERT INTO databoard VALUES(db_no_seq.nextval,"
+	    	    		   +"?,?,?,?,SYSDATE,0,'',0,?,?,?,?,?)";
+	    	    ps=conn.prepareStatement(sql);
+	    	    ps.setString(1, vo.getName());
+	    	    ps.setString(2, vo.getSubject());
+	    	    ps.setString(3, vo.getContent());
+	    	    ps.setString(4, vo.getPwd());
+	    	    ps.setInt(6, gs+1);
+	    	    ps.setInt(7, gt+1);
+	    	    ps.setInt(8, pno);
+	    	    ps.setInt(9, 0);
 				
 				// 실행요청
 				ps.executeUpdate();
 				// 6. → depth증가 (UPDATE)
 				sql="UPDATE databoard SET "
-					+"WHERE no=?"; //pno
+				    +"depth=depth+1 "
+			        +"WHERE no=?"; //pno
 				ps=conn.prepareStatement(sql);
 				ps.setInt(1, pno);
 				ps.executeUpdate();
@@ -214,22 +212,18 @@ public class DataBoardDAO {
 				// 오라클의 단점은 비절차적 언어 → 동시에 처리
 				conn.commit();
 				
-			} catch (Exception e) {
-				ex.printStackTrace();
-				try {
-					conn.rollback(); // 전체취소 SQL
-				} catch (Exception e2) {
-					
-				}
-			}
-		} finally {
-			try {
-				conn.setAutoCommit(true);
-			} catch (Exception e) {
-				disConnection();
-			}
-		}
-	}
+			} catch(Exception ex) {
+	    		ex.printStackTrace();
+	    		try {
+	    			conn.rollback(); // 전체 취소 (SQL)
+	    		} catch(Exception e){}
+	    	} finally {
+	    		try {
+	    			conn.setAutoCommit(true);
+	    		} catch(Exception e){}
+	    		disConnection();
+	    	}
+	    }
 	public DataBoardVO databoardUpdateData(int no) {
 		DataBoardVO vo=new DataBoardVO(); // 게시물 한개에 대한 데이터
 		try {

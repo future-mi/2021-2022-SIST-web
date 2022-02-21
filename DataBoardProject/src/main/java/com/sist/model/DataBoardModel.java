@@ -42,7 +42,7 @@ public class DataBoardModel {
 		
 	}
 	// 파일업로드 / 글쓰기
-	public void databoardInsert(HttpServletRequest request,	HttpServletResponse response) {
+	public void databoardInsert(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			request.setCharacterEncoding("UTF-8"); // 한글깨짐방지
 			// 1. 파일업로드
@@ -53,7 +53,8 @@ public class DataBoardModel {
 			// static메소드(클래스명.메소드), instance메소드(new를 이용해서)
 			
 			MultipartRequest mr=
-    				new MultipartRequest(request,path,maxSize,enctype,
+    				new MultipartRequest(request, 
+    						path,maxSize,enctype,
     						new DefaultFileRenamePolicy());
 			// 2. 데이터베이스에 첨부
 			String name=mr.getParameter("name");
