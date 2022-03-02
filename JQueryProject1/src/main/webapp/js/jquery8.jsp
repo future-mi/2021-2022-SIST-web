@@ -87,7 +87,3 @@ $(function(){
   </div>
 </body>
 </html>
-
-
-
-

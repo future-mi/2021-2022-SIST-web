@@ -54,6 +54,5 @@ public class SeoulDAO {
 			disConnection();
 		}
 		return list;
-		
 	}
 }
