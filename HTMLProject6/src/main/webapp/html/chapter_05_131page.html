@@ -1,0 +1,42 @@
+<!-- 
+	아이디 선택자 → 데이터 수집
+	<h1 id="a">내용</h1> → 태그를 선택해서 내용을 변경
+	형식)
+		id는 중복이 없는 속성값(HTML단점 → 같은 아이디를 사용 할 수 있다)
+		→ id명 = 태그(별칭)
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#a{
+	color:orange;
+}
+#b{
+	color:magenta;
+}
+#c{
+	color:#CCCCCf;
+}
+/*
+	색상처리
+	- 지정된 색상이용 → orange,red,white...
+	- 16진법 → #000000 → 255를 초과할 수 없다
+	- RGB를 이용한 색상처리 : rgb(값,값,값)
+	- 투명처리 : rgba() → a(0.0~1) → 속성 : opacity
+*/
+</style>
+</head>
+<body>
+ <center>
+ 	<h1>자바</h1>
+ 	<h1 id="a">오라클</h1>
+ 	<h1>HTML/CSS</h1>
+ 	<h1 id="b">자바스크립트</h1>
+ 	<h1>종합 : JSP</h1>
+ 	<h1 id="c">라이브러리:Spring → 프로그램 구조의 통일화</h1>
+ </center>
+</body>
+</html>

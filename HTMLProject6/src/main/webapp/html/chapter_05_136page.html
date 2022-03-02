@@ -1,0 +1,38 @@
+<!-- 
+	후손/자손/형제
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+	background-color: yellow; 
+}
+div>span>h1{
+	background-color: #CCCCFF;
+}
+/*
+  div 아래 p태그 바로 옆에 있는 h1태그를 가지고 온다 
+  데이터수집 
+*/
+div>p+h1{
+	color:blue;
+}
+div>p~h1{
+	color:magenta;
+}
+</style>
+</head>
+<body>
+ <div>
+ <p>Hello CSS</p>
+ <h1>형제1</h1>
+ <h1>형제2</h1>
+ <span>
+ 	<h1>후손1</h1>
+ </span> 
+ </div>
+</body>
+</html>
