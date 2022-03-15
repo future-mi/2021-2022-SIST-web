@@ -1,0 +1,59 @@
+<!-- 
+	박스속성 → 템플릿을 제작, 위치 지정
+	1. margin : 4가지 속성을 동시에 처리
+		- margin-top
+		- margin-right
+		- margin-bottm
+		- margin-left
+	2. padding : 4가지 속성을 동시에 처리
+		- padding-top
+		- padding-right
+		- padding-bottom
+		- padding-left
+	3. border : 3가지 처리
+		- border-width : 두께
+		- border-style : solid, dotted, dashed, double
+		- border-color : 등록된생상, RGB, 16진법
+		- border-radius : 50px 40px 20px 10px(왼쪽위 오른쪽위 오른쪽아래 왼쪽아래)
+	4. width : 크기
+	5. height : 길이
+	
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+	width:200px;
+	height:100px;
+	background-color: red;
+	display: inline-block;
+	/* inline(width와 height를 변경하지 않을때), inline-block(width와 height 변경시) */
+}
+.box1{
+	margin: 30px 50px 30px 50px;
+	background-color: blue;
+}
+.box2{
+	margin: 30px 50px;
+	background-color: yellow;
+}
+.box3{
+	margin: 30px 50px 30px;
+	background-color:cyan;
+}
+.box4{
+	margin: 30px;
+	background-color: lightgreen;
+}
+</style>
+</head>
+<body>
+ <div class="box1"></div>
+ <div class="box2"></div>
+ <div class="box3"></div>
+ <div class="box4"></div>
+</body>
+</html>

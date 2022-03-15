@@ -1,0 +1,166 @@
+<!-- 
+ [ HTML ]
+ - HTML/CSS → JSP, Spring, VueJS, ReactJS, Ajax, Jquery
+ - 태그 + 속성 (ML) → HTML/XML → Annotation
+ 1) 태그 
+ 	(1) 텍스트
+ 		- <h1>~<h6> : 제목
+ 		- <hr> : 라인선
+ 		- <br> : 줄바꿈
+ 		- <p> : 단락
+ 		- <pre> : 저장된 형태로 출력
+ 		- <strong>, <b> : 강조체
+ 		- <address> : 이텔릭체 
+ 		 → 출력형태 <i>, <sub>, <sup>
+ 		
+ 	(2) 이미지 : <img>, <map>, <area> → 그림을 부분 선택 	
+ 	(3) 페이지 이동
+ 		- <a> : 다른 페이지 이동
+ 	(4) 목록	
+ 	    - <ul> → <li>
+ 	    - <dl> → <dt>, <dd>
+ 	    - <table> → <tr> → <th>,  <td>
+ 	    
+ 	(4) 템플릿 : 화면분할
+ 		- <div> : 블록 속성(세로단위 분할)
+ 		- <span> : 인라인(가로단위 분할)
+ 		- HTML5 : <header>, <nav>, <article>, <footer>, <section>
+ 	(5) 멀티미디어(동영상)
+ 		- <video>
+ 		- <audio> → 파일이 저장된 상태
+ 		- youtube → <embed> : 동영상만 출력
+ 		            <iframe> : 동영상 / 다른 html 파일을 읽어서 출력
+ 	
+ 2) 태그 → 속성
+ 	- width, height
+ 		→ px(절대값), em, %(상대값)
+ 	- name : 자바연동(입력된 데이터값)
+ 	- id : 중복이 없는 구분자
+ 	- class : 중복이 있는 구분자
+ 	- style : 한개의 태그만 스타일 변경(인라인 CSS)
+ 3) 사용자 입력과 관련된 태그
+ 	- <input> : 디폴트 선택, 활성화(enabled, disabled, readonly)
+ 		(1) type속성
+ 			- text
+ 			- password
+ 			- file
+ 			- hidden
+ 			- number
+ 			- date
+ 			- radio
+ 			- checkbox
+ 			- submit
+ 			- image
+ 	- <textarea> : 여러줄 전송 → 글쓰기, 댓글
+ 	- <select> : 한개를 선택 → CHECK
+ 	- <form> : 사용자가 입력한 데이터를 모아서 전송
+ 		→ action, method="GET/POST" 
+ 		→ action : 데이터를 받을 파일 지정
+ 		
+  [ CSS ] 선택자, 속성
+  - 태그를 한개씩 변경(디자인)
+  - Jquery, Ajax, Vue, React → HTML의 태그를 제어하는 프로그램
+  1) 선택자
+  	- Jquery : $('선택자').click(function(){})
+  	- 태그 선택자
+  		태그명 {
+  			속성:값
+  		}
+  	- 구분자 선택
+  		ID: 한개만 설정(중복없다)
+  		#ID명{
+  			속성:값
+  		}
+  		.CALSS: 여러개 설정(중복있다)
+  		CALSS명 {
+  			속성:값
+  		}
+  	- 멀티 선택자
+  		태그명,태그명...{
+  			속성:값
+  		}
+  		#id명,#id명...{
+  			속성:값
+  		}
+  		.class명, .class명..{
+  			속성:값
+  		}
+  		태그명, .class명, #id명{
+  			속성:값
+  		}
+	- 자손 선택자
+		태그명 > 태그명
+		<div>
+         <h1></h1>
+           <span>
+             <h1></h1>
+           </span>
+         <div> 
+        → div > h1
+	- 후손 선택자
+		div h1
+	- 가상 선택자
+		:active, :focus, :enabled, :checked, :disabled 
+		:first-child, :lasg-child, :nth-child(n)
+	- 속성 선택자
+		태그명[속성명="값"]
+		→ 정규식
+			* : 포함 / 태그명[속성*="값"]
+			^ : 시작 / 태그명[속성^="값"] → email, site, 이미지
+			$ : 끝  / 태그명[속성$="png|jpg|gif"] → 이미지.png
+  2) CSS 속성
+  - CSS 단위 : px, em, %
+  ex) font-size:14px
+  	  2em → 14*2 → 28px / 200% → 14*2 → 28px
+  - CSS 속성
+  	(1) 영역크기(박스모델)
+  		- margin : 브라우저와의 간격
+  			margin : top, right, bottom, left(순으로 값을 넣어야함) → 20px 30px 20px 30px
+  			margin : 20px(모두가 20px)
+  			margin : 20px 30px(20px 30px 20px 30px)
+  			margin : 20px 30px 50px(20px 30px 50px 30px)
+  		- padding
+  		- border
+  	(2) 글자변경
+  		- font
+  		- color
+  		- text
+  	(3) 바탕색
+  		- background
+  	(4) 위치관련
+  		- absolute
+  		- relative
+  		- static
+  	(5) 레이어관련 
+  		- z-index
+
+ --> 
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div#wrapper {
+	width:500px;   /* 100% 브라우저 전체 크기 */
+	height:500px;
+	border:2px solid red;
+	margin-top:100px;
+	margin-left: 100px;
+}
+div#header{
+	width:300px;
+	height:300px;
+	border:2px dotted green;
+	margin: 0px auto;
+	margin-top: 100px;
+	padding: 100px;
+}
+</style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header"> Hello CSS </div>
+ </div>
+</body>
+</html>
