@@ -1,0 +1,65 @@
+<!-- 
+	[ button 종류 ]
+	1. 크기 : btn-sm, btn-lg, btn-xs
+	2. 색상
+		- btn-danger : red
+		- btn-success : green
+		- btn-info : cyan
+		- btn-primary : blue
+		- btn-default : gray
+		- btn-warning : orange
+	→ 모든 태그를 버튼화 가능 <span>, <a>, <input type=button>, <button>  
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.container{
+  margin-top: 50px;
+}
+.row{
+  margin: 0px auto;
+  width:800px;
+}
+h1{
+   text-align: center;
+}
+</style>
+</head>
+<body>
+ <div class="container">
+ <div class="jumbotron">
+ 	<h1>Hello Bootstrap</h1>
+ </div>
+  <div class="row">
+   <span class="btn btn-sm btn-danger">1번</span>
+   <span class="btn btn-sm btn-info">2번</span>
+   <span class="btn btn-sm btn-primary"> 3번</span>
+   <span class="btn btn-sm btn-success">4번</span>
+   <span class="btn btn-sm btn-default">5번</span>
+   <span class="btn btn-sm btn-warning">6번</span>
+  </div>
+ </div>
+ <div style="height: 30px"> </div>
+ <div class="row">
+   <span class="btn btn-lg btn-danger">1번</span>
+   <span class="btn btn-lg btn-info">2번</span>
+   <span class="btn btn-lg btn-primary"> 3번</span>
+   <span class="btn btn-lg btn-success">4번</span>
+   <span class="btn btn-lg btn-default">5번</span>
+   <span class="btn btn-lg btn-warning">6번</span>
+ </div>
+ <div style="height: 30px"> </div>
+ <div class="row">
+   <span class="btn btn-xs btn-danger">1번</span>
+   <span class="btn btn-xs btn-info">2번</span>
+   <span class="btn btn-xs btn-primary"> 3번</span>
+   <span class="btn btn-xs btn-success">4번</span>
+   <span class="btn btn-xs btn-default">5번</span>
+   <span class="btn btn-xs btn-warning">6번</span>
+ </div>
+</body>
+</html>
