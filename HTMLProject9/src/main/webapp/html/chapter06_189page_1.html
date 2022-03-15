@@ -1,0 +1,147 @@
+<!-- 
+	[ 텍스트 스타일 ]
+	color : 글자색상
+	text-decoration : underline(밑줄), none(없음), overline(위에), line-through(취소선)
+	text-align : left, center, right
+	text-transform : none, capialize, uppercase, lowercase
+	text-shadow : 가로거리 세로거리 번짐 색상
+	white-space : 공백처리
+	letter-spacing, word-spacing : 텍스트 간격
+	line-height
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+	color: rgb(0,255,0);
+	text-align: center;
+}
+h2 {
+	color: blue;
+}
+span{
+	color: red;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: underline;
+	color: green;
+}
+#a {
+	text-decoration: overline;
+}
+#b {
+	text-decoration: line-through;
+}
+.c {
+	text-transform: capitalize;
+}
+.d {
+	text-transform: uppercase;
+}
+.e {
+	text-transform: lowercase;
+}
+.k {
+	color: orange;
+	text-shadow: 1px 1px;
+}
+.m {
+	text-shadow: 5px 5px 3px #f00;
+}
+.n {
+	color : #fff;
+	text-shadow: 7px -7px -5px #000;
+}
+div{
+	background-color: #FC6;
+	width: 50%;
+	height: 300px;
+	padding: 20px;
+	overflow: scroll;
+}
+pre{
+	white-space: pre-wrap;
+}
+.h2{
+	letter-spacing: 8px;
+}
+.h3{
+	letter-spacing: 10px;
+}
+.h4{	
+	letter-spacing: 15px;
+}
+.div{
+	text-align: center;
+	width: 30%;
+	height: 100px;
+	vertical-align: middle;
+}
+.div2{
+	padding: 0px;
+}
+.i1 {
+	text-indent: 15px; /* 들여쓰기 */ 
+	line-height: 30px;
+}
+.i2 {
+	text-indent: 30px;
+}
+</style>
+</head>
+<body>
+ <h1>해적: 도깨비깃발</h1>
+ <img src="../image/m1.jpg">
+ <h2>"가자, 보물찾으러!"</h2>
+ <p>자칭 고려 제일검인 의적단 두목 <span> ‘무치’(강하늘)</span>와
+ 바다를 평정한 해적선의 주인 <span>‘해랑’(한효주).</span></p>
+ <a href="#">예매하기</a><br>
+ <h3 id="a">OverLine</h3>
+ <h3 id="b">Line-Though</h3>
+ <h2 class="c">HTML5</h2>
+ <h2 class="d">HTML5</h2>
+ <h2 class="e">HTML5</h2>
+ <h2 class="e">HTML5</h2>
+ <h1 class="k">HTML5</h1>
+ <h1 class="m">HTML5</h1>
+ <h1 class="n">HTML5</h1>
+ <div>
+ <pre>세상을 바꾸기 위해 도전하는 정치인 ‘김운범’ 앞에
+ 그와 뜻을 함께하고자 선거 전략가 ‘서창대’가 찾아온다.
+ 
+열세인 상황 속에서 서창대는 아무도 상상하지 못한 선거 전략을 펼치고
+‘김운범’은 선거에 연이어 승리하며, 당을 대표하는 대통령 후보까지 올라서게 된다.
+대통령 선거를 향한 본격적인 행보가 시작되고 그들은 당선을 위해 총력을 기울인다.
+
+그러던 중 ‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고
+용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게 되는데...
+
+치열한 선거판,
+그 중심에 있던 두 남자의 이야기가 시작된다
+이와 관련해 난색을 보이는 목소리는 이미 처음 도입될 때부터 심심치 않게 들려왔다. 기본 배달비 부과가 당연시되고, 그 금액이 점차 늘어나고 있는데 소액배달비까지 추가되면 소비자 부담이 커지는 게 아니냐는 의견이다.
+소비자들은 "배달비 냈으면 됐지 주문금액까지 제한하는 것인가"라며 반박하고 있다.
+반면 "적은 금액으로 팔아서는 남는 게 없다. 비싸면 포장해서 먹으면 된다"와 같은 이견도 보인다.
+배달의민족 관계자는 뉴스워커에 "소액주문비는 주문에서 배달까지 책임지는 배민1에만 적용하고 있다.</pre>
+ </div>
+ <h2 class="h2">HTML5 & CSS</h2>
+ <h2 class="h3">HTML5 & CSS</h2>
+ <h2 class="h4">HTML5 & CSS</h2>
+ <div class="div">
+  <h3>Hello HTML/CSS</h3>
+ </div>
+ <div class="div2">
+  <p class="i">그러던 중 ‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고
+용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게 되는데</p>
+  <p class="i2">그러던 중 ‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고
+용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게 되는데</p>
+ </div>
+</body>
+</html>

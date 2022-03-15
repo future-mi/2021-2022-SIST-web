@@ -1,0 +1,185 @@
+<!-- 
+	[ 170page - 배경속성 ]
+	background-color : 배경색 지정
+	background-image : 배경이미지 지정
+	background-repeat : 배경이미지 반복
+	background-size : 배경이미지 크기
+	background : 배경을 한꺼번에 처리
+	background-position : 이미지 위치 지정
+	background-attachment : 고정여부 (scroll, fixed)
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+	background-color: #222222;
+}
+
+.t1 {
+	color: white;
+}
+
+.t2 {
+	color: rgb(255, 255, 255);
+}
+
+.t3 {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.t4 {
+	color: rgba(255, 255, 255, 0.2);
+}
+
+.t5 {
+	color: #ffffff;
+}
+
+div {
+	background-color: rgb(113, 194, 255);
+	width: "50%";
+	padding: "15px";
+	border: "2px solid white";
+}
+
+p {
+	line-height: 30px; /* 줄 간격 */
+}
+
+div.gallery1 {
+	background-image: url('../image/1.JPG');
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div.gallery2 {
+	background-image: url('../image/2.JPG');
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*
+		default : 반복
+		no-repeat : 반복없이 추가
+		repeat : 반복
+		이미지가 작은 경우 : repeat를 이용해서 타일형식으로 제작
+		이미지가 큰 경우 : cover를 이용해서 화면위치에 맞게 고정
+	*/
+}
+
+div.tiles {
+	width: 100%;
+	height: 600px;
+	border: 1px solid white;
+	margin-top: 50px;
+	background-image: url('../image/3.JPG');
+	background-repeat: no-repeat;
+}
+
+div.images {
+	width: 50%;
+	height: 600px;
+	border: 2px solid white;
+	margin-top: 50px;
+	background-image: url('../image/m1.jpg');
+	/* background-size: 200px 150px; */
+	/* background-size: 60% 40%; */
+	/* background-size: cover; */
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+div.bg1 {
+	background-image: url('../image/m1.jpg');
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 150px;
+	background-size: 100px 200px;
+}
+
+div.bg2 {
+	background-image: url('../image/m1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 150px;
+}
+
+div.attr {
+	width: 50%;
+	height: 350px;
+	background-image: url('../image/m1.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100px;
+	background-attachment: scroll;
+	overflow: auto; /* 자체 Scroll제작 */
+}
+
+div.back {
+	width: 50%;
+	height: 350px;
+	background: url("../image/m1.jpg") no-repeat fixed;
+}
+</style>
+</head>
+<body>
+	<h1 class="t1">HTML5+CSS</h1>
+	<h1 class="t2">HTML5+CSS</h1>
+	<h1 class="t3">HTML5+CSS</h1>
+	<h1 class="t4">HTML5+CSS</h1>
+	<h1 class="t5">HTML5+CSS</h1>
+	<div>
+		<p>이와 관련해 난색을 보이는 목소리는 이미 처음 도입될 때부터 심심치 않게 들려왔다. 기본 배달비 부과가
+			당연시되고, 그 금액이 점차 늘어나고 있는데 소액배달비까지 추가되면 소비자 부담이 커지는 게 아니냐는 의견이다. 소비자들은
+			"배달비 냈으면 됐지 주문금액까지 제한하는 것인가"라며 반박하고 있다. 반면 "적은 금액으로 팔아서는 남는 게 없다. 비싸면
+			포장해서 먹으면 된다"와 같은 이견도 보인다. 배달의민족 관계자는 뉴스워커에 "소액주문비는 주문에서 배달까지 책임지는
+			배민1에만 적용하고 있다. 비용을 적게 지불하되 원하는 만큼만 주문하고자 하는 소비자의 요구에 따라 도입됐다"라며
+			"5000원 이상, 12000원 미만의 소액주문에 한하며, 500~2000원 소액주문비로 책정된다"라고 설명했다.</p>
+	</div>
+	<div class="gallery1"></div>
+	<div class="gallery2"></div>
+	<div class="tiles"></div>
+	<div class="images"></div>
+	<div class="bg1">
+		<h1>“가자, 보물 찾으러!”</h1>
+		<p>자칭 고려 제일검인 의적단 두목 ‘무치’(강하늘)와 바다를 평정한 해적선의 주인 ‘해랑’(한효주). 한 배에서
+			운명을 함께하게 된 이들이지만 산과 바다, 태생부터 상극으로 사사건건 부딪히며 바람 잘 날 없는 항해를 이어간다.</p>
+	</div>
+	<div class="bg2">
+		<h1>“가자, 보물 찾으러!”</h1>
+		<p>자칭 고려 제일검인 의적단 두목 ‘무치’(강하늘)와 바다를 평정한 해적선의 주인 ‘해랑’(한효주). 한 배에서
+			운명을 함께하게 된 이들이지만 산과 바다, 태생부터 상극으로 사사건건 부딪히며 바람 잘 날 없는 항해를 이어간다.</p>
+	</div>
+	<div class="attr">
+		<h1>세상 바뀌는 꼴 좀 보고 싶습니다</h1>
+		<p>10191년, 아트레이데스 가문의 후계자인 폴(티모시 샬라메)은 시공을 초월한 존재이자 전 우주를 구원할 예지된
+			자의 운명을 타고났다. 그리고 어떤 계시처럼 매일 꿈에서 아라키스 행성에 있는 한 여인을 만난다. 모래언덕을 뜻하는
+			'듄'이라 불리는 아라키스는 물 한 방울 없는 사막이지만 우주에서 가장 비싼 물질인 신성한 환각제 스파이스의 유일한 생산지로
+			이를 차지하기 위한 전쟁이 치열하다. 황제의 명령으로 폴과 아트레이데스 가문은 죽음이 기다리는 아라키스로 향하는데… 전
+			우주를 구원할 예지된 자의 운명을 타고났다. 그리고 어떤 계시처럼 매일 꿈에서 아라키스 행성에 있는 한 여인을 만난다.
+			모래언덕을 뜻하는 '듄'이라 불리는 아라키스는 물 한 방울 없는 사막이지만 우주에서 가장 비싼 물질인 신성한 환각제
+			스파이스의 유일한 생산지로 이를 차지하기 위한 전쟁이 치열하다. 황제의 명령으로 폴과 아트레이데스 가문은 죽음이 기다리는
+			아라키스로 향하는데… 전 우주를 구원할 예지된 자의 운명을 타고났다. 그리고 어떤 계시처럼 매일 꿈에서 아라키스 행성에 있는
+			한 여인을 만난다. 모래언덕을 뜻하는 '듄'이라 불리는 아라키스는 물 한 방울 없는 사막이지만 우주에서 가장 비싼 물질인
+			신성한 환각제 스파이스의 유일한 생산지로 이를 차지하기 위한 전쟁이 치열하다. 황제의 명령으로 폴과 아트레이데스 가문은
+			죽음이 기다리는 아라키스로 향하는데… 위대한 자는 부름에 응답한다, 두려움에 맞서라, 이것은 위대한 시작이다!</p>
+	</div>
+	<div class="back">
+		<h1>세상 바뀌는 꼴 좀 보고 싶습니다</h1>
+		<p>세상을 바꾸기 위해 도전하는 정치인 ‘김운범’ 앞에 그와 뜻을 함께하고자 선거 전략가 ‘서창대’가 찾아온다.
+			열세인 상황 속에서 서창대는 아무도 상상하지 못한 선거 전략을 펼치고 ‘김운범’은 선거에 연이어 승리하며, 당을 대표하는
+			대통령 후보까지 올라서게 된다. 대통령 선거를 향한 본격적인 행보가 시작되고 그들은 당선을 위해 총력을 기울인다. 그러던 중
+			‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고 용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게
+			되는데... 치열한 선거판, 그 중심에 있던 두 남자의 이야기가 시작된다 이와 관련해 난색을 보이는 목소리는 이미 처음
+			도입될 때부터 심심치 않게 들려왔다. 기본 배달비 부과가 당연시되고, 그 금액이 점차 늘어나고 있는데 소액배달비까지 추가되면
+			소비자 부담이 커지는 게 아니냐는 의견이다. 소비자들은 "배달비 냈으면 됐지 주문금액까지 제한하는 것인가"라며 반박하고
+			있다. 반면 "적은 금액으로 팔아서는 남는 게 없다. 비싸면 포장해서 먹으면 된다"와 같은 이견도 보인다. 배달의민족
+			관계자는 뉴스워커에 "소액주문비는 주문에서 배달까지 책임지는 배민1에만 적용하고 있다. 비용을 적게 지불하되 원하는 만큼만
+			주문하고자 하는 소비자의 요구에 따라 도입됐다"라며 "5000원 이상, 12000원 미만의 소액주문에 한하며,
+			500~2000원 소액주문비로 책정된다"라고 설명했다.</p>
+	</div>
+</body>
+</html>
