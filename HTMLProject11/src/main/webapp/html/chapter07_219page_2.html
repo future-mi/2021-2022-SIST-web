@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #f3e5f5;
+}
+
+#container {
+	width: 960px;
+	margin: 0px auto;
+	border: 1px solid black;
+}
+
+header {
+	width: 100%;
+	height: 150px;
+	background: #9575cd;
+}
+
+aside {
+	float: left;
+	width: 30%;
+	height: 700px;
+	background: purple;
+}
+
+section {
+	float: left;
+	width: 70%;
+	height: 700px;
+	background: #903cb4;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+	height: 150px;
+	background: #5e35b1;
+}
+
+/* 0 ~ 960px */
+@media ( max-width :960px) {
+	#container {
+		width: 95%
+	}
+}
+/* 0 ~ 768px */
+@media ( max-width :768px) {
+	#container {
+		width: 100%
+	}
+}
+/* 0 ~ 480px */
+@media ( max-width :480px) {
+	#container {
+		width: 100%
+	}
+	header {
+		height: 300px;
+	}
+	aside {
+		float: none;
+		width: 100%;
+		height: 300px
+	}
+	section {
+		float: none;
+		width: 100%;
+		height: 300px
+	}
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<header></header>
+		<aside></aside>
+		<section></section>
+		<footer></footer>
+	</div>
+</body>
+</html>
